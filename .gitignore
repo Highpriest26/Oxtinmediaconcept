@@ -32,6 +32,11 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
+
+# client reference assets that must NOT be published (team photos, staff cards, etc.)
+/reference/*
+!/reference/README.md
 
 # vercel
 .vercel

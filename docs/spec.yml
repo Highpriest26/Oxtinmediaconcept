@@ -1,0 +1,53 @@
+version: '2.0'
+task:
+  id: oxtinmediaconcept-modern-website
+  name: Oxtinmediaconcept Limited — Modern Portfolio Website
+  mode: implementation
+  objective: Build a premium, modern, highly visual corporate portfolio website for Oxtinmediaconcept Limited, an Abuja-based
+    branding, printing, fabrication, billboard, signage and sculpture company.
+mandatory_stack:
+  framework: Next.js
+  router: App Router
+  language: TypeScript
+  styling: Tailwind CSS
+  image_component: next/image
+  deployment_target: Vercel
+verified_company_data:
+  company_name: Oxtinmediaconcept Limited
+  location_summary: Abuja, Nigeria
+  established: 2017
+  experience_display: Since 2017
+  projects_completed_display: 450+ Projects Delivered
+  positioning: An Abuja-based branding, printing, fabrication and installation company delivering visual branding solutions
+    for businesses, advertising agencies, retailers and organisations across Nigeria.
+  capability_summary: Oxtinmediaconcept combines design, printing, fabrication, billboard construction and installation, commercial
+    branding and sculpture to deliver physical brand experiences from production through execution.
+  address: C98, Second Floor, Murg Shopping Mall, 1 Akwa Street, Area 10, Garki, Abuja FCT
+  phones:
+  - 08114948814
+  - 08064868303
+  email: oxtinmediaconcept@gmail.com
+confirmed_services:
+- billboards-outdoor-advertising
+- branding-signage
+- large-format-printing
+- vehicle-branding
+- commercial-finishing
+- sculpture-creative-fabrication
+- graphic-design
+approved_brand_portfolio:
+- TECNO
+- Infinix
+- itel
+- OPPO
+- Speedaf
+verified_equipment:
+- Yinghe YH-3200S (Large-format)
+- Konica Minolta C4070 (Digital print)
+- Heidelberg Offset KORD 64 (Offset)
+process_display:
+- Consult
+- Design
+- Produce
+- Install
+- Quality Check
