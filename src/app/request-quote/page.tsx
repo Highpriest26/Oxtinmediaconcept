@@ -26,11 +26,11 @@ export default async function RequestQuotePage({
         intro={pageCopy.quote.intro}
       />
 
-      <section className="py-16 sm:py-24">
-        <div className="container-site grid gap-16 lg:grid-cols-12">
+      <section className="py-10 sm:py-16 lg:py-24">
+        <div className="container-site grid gap-10 sm:gap-12 lg:gap-16 lg:grid-cols-12">
           {/* Main Form */}
           <div className="lg:col-span-8">
-            <div className="border border-ink/10 bg-paper p-6 sm:p-10">
+            <div className="rounded-2xl border border-ink/10 bg-paper p-5 sm:p-8 lg:p-10 shadow-xs">
               <h2 className="font-display text-2xl font-bold text-ink mb-6">
                 Tell us about your project
               </h2>
@@ -40,7 +40,7 @@ export default async function RequestQuotePage({
 
           {/* Direct Contact Sidebar */}
           <div className="space-y-8 lg:col-span-4">
-            <div className="border border-ink/10 bg-surface p-6 sm:p-8">
+            <div className="rounded-2xl border border-ink/10 bg-surface p-5 sm:p-8">
               <h3 className="eyebrow text-brand">Prefer direct contact?</h3>
               <p className="mt-3 text-sm text-muted leading-relaxed">
                 If you have architectural drawings, site photos, or need immediate consultation,

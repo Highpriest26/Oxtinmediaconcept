@@ -20,7 +20,7 @@ export function QuoteForm({ defaultProjectType }: { defaultProjectType?: string 
       {state.status === "not_configured" && (
         <div
           role="alert"
-          className="mb-8 border-l-4 border-amber-500 bg-amber-50 p-6 text-amber-900 dark:bg-amber-950/40 dark:text-amber-200"
+          className="mb-8 rounded-xl border-l-4 border-amber-500 bg-amber-50 p-6 text-amber-900 dark:bg-amber-950/40 dark:text-amber-200"
         >
           <div className="flex items-start gap-4">
             <Icon name="phone" className="mt-0.5 size-6 shrink-0 text-amber-600 dark:text-amber-400" />
@@ -57,7 +57,7 @@ export function QuoteForm({ defaultProjectType }: { defaultProjectType?: string 
       {state.status === "error" && (
         <div
           role="alert"
-          className="mb-8 border-l-4 border-red-500 bg-red-50 p-5 text-sm text-red-900 dark:bg-red-950/40 dark:text-red-200"
+          className="mb-8 rounded-xl border-l-4 border-red-500 bg-red-50 p-5 text-sm text-red-900 dark:bg-red-950/40 dark:text-red-200"
         >
           <p className="font-semibold">{state.message}</p>
         </div>
@@ -66,7 +66,7 @@ export function QuoteForm({ defaultProjectType }: { defaultProjectType?: string 
       {state.status === "success" && (
         <div
           role="alert"
-          className="mb-8 border-l-4 border-green-500 bg-green-50 p-6 text-green-900 dark:bg-green-950/40 dark:text-green-200"
+          className="mb-8 rounded-xl border-l-4 border-green-500 bg-green-50 p-6 text-green-900 dark:bg-green-950/40 dark:text-green-200"
         >
           <p className="text-lg font-bold">Enquiry Received</p>
           <p className="mt-2 text-sm leading-relaxed">{state.message}</p>
@@ -76,7 +76,7 @@ export function QuoteForm({ defaultProjectType }: { defaultProjectType?: string 
       {state.status === "invalid" && (
         <div
           role="alert"
-          className="mb-8 border-l-4 border-red-500 bg-red-50 p-5 text-sm text-red-900 dark:bg-red-950/40 dark:text-red-200"
+          className="mb-8 rounded-xl border-l-4 border-red-500 bg-red-50 p-5 text-sm text-red-900 dark:bg-red-950/40 dark:text-red-200"
         >
           <p className="font-semibold">{state.message}</p>
         </div>
@@ -108,7 +108,7 @@ export function QuoteForm({ defaultProjectType }: { defaultProjectType?: string 
               aria-invalid={Boolean(fieldErrors.fullName)}
               aria-describedby={fieldErrors.fullName ? `${formId}-fullName-err` : undefined}
               className={cn(
-                "mt-2 block w-full rounded-none border bg-paper px-4 py-3 text-ink transition-colors",
+                "mt-2 block w-full rounded-xl border bg-paper px-4 py-3.5 text-base text-ink transition-colors outline-none focus:ring-2 focus:ring-brand/20",
                 fieldErrors.fullName ? "border-red-500 focus:border-red-500" : "border-ink/20 focus:border-brand",
               )}
               placeholder="e.g. Augustine Sunday"
@@ -131,7 +131,7 @@ export function QuoteForm({ defaultProjectType }: { defaultProjectType?: string 
               type="text"
               aria-invalid={Boolean(fieldErrors.company)}
               aria-describedby={fieldErrors.company ? `${formId}-company-err` : undefined}
-              className="mt-2 block w-full rounded-none border border-ink/20 bg-paper px-4 py-3 text-ink focus:border-brand"
+              className="mt-2 block w-full rounded-xl border border-ink/20 bg-paper px-4 py-3.5 text-base text-ink transition-colors outline-none focus:border-brand focus:ring-2 focus:ring-brand/20"
               placeholder="e.g. Brand Concept Ltd"
             />
             {fieldErrors.company && (
@@ -156,7 +156,7 @@ export function QuoteForm({ defaultProjectType }: { defaultProjectType?: string 
               aria-invalid={Boolean(fieldErrors.email)}
               aria-describedby={fieldErrors.email ? `${formId}-email-err` : undefined}
               className={cn(
-                "mt-2 block w-full rounded-none border bg-paper px-4 py-3 text-ink transition-colors",
+                "mt-2 block w-full rounded-xl border bg-paper px-4 py-3.5 text-base text-ink transition-colors outline-none focus:ring-2 focus:ring-brand/20",
                 fieldErrors.email ? "border-red-500 focus:border-red-500" : "border-ink/20 focus:border-brand",
               )}
               placeholder="you@company.com"
@@ -181,7 +181,7 @@ export function QuoteForm({ defaultProjectType }: { defaultProjectType?: string 
               aria-invalid={Boolean(fieldErrors.phone)}
               aria-describedby={fieldErrors.phone ? `${formId}-phone-err` : undefined}
               className={cn(
-                "mt-2 block w-full rounded-none border bg-paper px-4 py-3 text-ink transition-colors",
+                "mt-2 block w-full rounded-xl border bg-paper px-4 py-3.5 text-base text-ink transition-colors outline-none focus:ring-2 focus:ring-brand/20",
                 fieldErrors.phone ? "border-red-500 focus:border-red-500" : "border-ink/20 focus:border-brand",
               )}
               placeholder="e.g. 0811 494 8814"
@@ -208,7 +208,7 @@ export function QuoteForm({ defaultProjectType }: { defaultProjectType?: string 
               aria-invalid={Boolean(fieldErrors.projectType)}
               aria-describedby={fieldErrors.projectType ? `${formId}-projectType-err` : undefined}
               className={cn(
-                "mt-2 block w-full rounded-none border bg-paper px-4 py-3 text-ink transition-colors",
+                "mt-2 block w-full rounded-xl border bg-paper px-4 py-3.5 text-base text-ink transition-colors outline-none focus:ring-2 focus:ring-brand/20",
                 fieldErrors.projectType ? "border-red-500 focus:border-red-500" : "border-ink/20 focus:border-brand",
               )}
             >
@@ -241,7 +241,7 @@ export function QuoteForm({ defaultProjectType }: { defaultProjectType?: string 
               aria-invalid={Boolean(fieldErrors.location)}
               aria-describedby={fieldErrors.location ? `${formId}-location-err` : undefined}
               className={cn(
-                "mt-2 block w-full rounded-none border bg-paper px-4 py-3 text-ink transition-colors",
+                "mt-2 block w-full rounded-xl border bg-paper px-4 py-3.5 text-base text-ink transition-colors outline-none focus:ring-2 focus:ring-brand/20",
                 fieldErrors.location ? "border-red-500 focus:border-red-500" : "border-ink/20 focus:border-brand",
               )}
               placeholder="e.g. Abuja FCT, Nasarawa, Lagos"
@@ -266,7 +266,7 @@ export function QuoteForm({ defaultProjectType }: { defaultProjectType?: string 
               type="text"
               aria-invalid={Boolean(fieldErrors.scope)}
               aria-describedby={fieldErrors.scope ? `${formId}-scope-err` : undefined}
-              className="mt-2 block w-full rounded-none border border-ink/20 bg-paper px-4 py-3 text-ink focus:border-brand"
+              className="mt-2 block w-full rounded-xl border border-ink/20 bg-paper px-4 py-3.5 text-base text-ink transition-colors outline-none focus:border-brand focus:ring-2 focus:ring-brand/20"
               placeholder="e.g. 10m x 4m façade sign, 3 vehicles"
             />
             {fieldErrors.scope && (
@@ -287,7 +287,7 @@ export function QuoteForm({ defaultProjectType }: { defaultProjectType?: string 
               defaultValue=""
               aria-invalid={Boolean(fieldErrors.timeline)}
               aria-describedby={fieldErrors.timeline ? `${formId}-timeline-err` : undefined}
-              className="mt-2 block w-full rounded-none border border-ink/20 bg-paper px-4 py-3 text-ink focus:border-brand"
+              className="mt-2 block w-full rounded-xl border border-ink/20 bg-paper px-4 py-3.5 text-base text-ink transition-colors outline-none focus:border-brand focus:ring-2 focus:ring-brand/20"
             >
               <option value="">Select expected timeline...</option>
               {quoteTimelines.map((timeline) => (
@@ -317,7 +317,7 @@ export function QuoteForm({ defaultProjectType }: { defaultProjectType?: string 
             aria-invalid={Boolean(fieldErrors.description)}
             aria-describedby={fieldErrors.description ? `${formId}-description-err` : undefined}
             className={cn(
-              "mt-2 block w-full rounded-none border bg-paper px-4 py-3 text-ink transition-colors",
+              "mt-2 block w-full rounded-xl border bg-paper px-4 py-3.5 text-base text-ink transition-colors outline-none focus:ring-2 focus:ring-brand/20",
               fieldErrors.description ? "border-red-500 focus:border-red-500" : "border-ink/20 focus:border-brand",
             )}
             placeholder="Tell us about the project: dimensions, materials preference, site conditions, or any custom specifications."
@@ -329,8 +329,8 @@ export function QuoteForm({ defaultProjectType }: { defaultProjectType?: string 
           )}
         </div>
 
-        {/* Reference File Upload UI — clearly non-functional placeholder until cloud storage is wired */}
-        <div className="rounded-none border border-dashed border-ink/20 bg-surface/50 p-6 text-center">
+        {/* Reference File Upload UI */}
+        <div className="rounded-2xl border border-dashed border-ink/20 bg-surface/50 p-6 text-center">
           <Icon name="image" className="mx-auto size-8 text-muted" />
           <h4 className="mt-2 text-sm font-semibold text-ink">Reference Photos / Artwork Upload</h4>
           <p className="mt-1 text-xs text-muted">
@@ -361,7 +361,7 @@ export function QuoteForm({ defaultProjectType }: { defaultProjectType?: string 
               type="checkbox"
               name="consent"
               required
-              className="mt-1 size-4 rounded-none border-ink/30 text-brand focus:ring-brand"
+              className="mt-1 size-4 rounded border-ink/30 text-brand focus:ring-brand"
             />
             <span className="text-xs leading-relaxed text-muted">
               I agree that Oxtinmediaconcept Limited may use these details to contact me regarding this project enquiry.
@@ -377,7 +377,7 @@ export function QuoteForm({ defaultProjectType }: { defaultProjectType?: string 
           <button
             type="submit"
             disabled={isPending}
-            className={buttonClass("primary", "w-full sm:w-auto min-w-[200px]")}
+            className={buttonClass("primary", "w-full sm:w-auto min-w-[200px] rounded-full")}
           >
             {isPending ? "Submitting Request..." : "Submit Project Enquiry"}
           </button>

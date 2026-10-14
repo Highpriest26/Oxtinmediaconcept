@@ -5,7 +5,7 @@ import { Icon } from "../ui/Icon";
 /** Contact details block (all values from src/content/contact.ts). */
 export function ContactDetails() {
   return (
-    <div className="grid gap-px overflow-hidden border border-ink/10 bg-ink/10 sm:grid-cols-2">
+    <div className="grid gap-px overflow-hidden rounded-2xl border border-ink/10 bg-ink/10 sm:grid-cols-2">
       <div className="bg-paper p-6 sm:p-8">
         <h2 className="eyebrow flex items-center gap-2 text-brand">
           <Icon name="phone" className="size-4" /> Phone
@@ -13,7 +13,7 @@ export function ContactDetails() {
         <ul className="mt-4 space-y-2">
           {publicPhones().map((p) => (
             <li key={p.e164}>
-              <a href={telHref(p.e164)} className="font-display text-2xl font-extrabold text-ink hover:text-brand">
+              <a href={telHref(p.e164)} className="font-display text-xl sm:text-2xl font-extrabold text-ink hover:text-brand">
                 {p.display}
               </a>
             </li>
@@ -30,7 +30,7 @@ export function ContactDetails() {
           href={whatsappHref()}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-4 inline-flex min-h-12 items-center gap-2 bg-[#128C4A] px-5 text-sm font-semibold text-white hover:bg-[#0e6f3a]"
+          className="mt-4 inline-flex min-h-12 w-full sm:w-auto justify-center rounded-full items-center gap-2 bg-[#128C4A] px-5 text-sm font-semibold text-white hover:bg-[#0e6f3a]"
         >
           <Icon name="whatsapp" className="size-4" />
           Chat on WhatsApp

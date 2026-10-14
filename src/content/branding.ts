@@ -11,9 +11,12 @@ import type { Branding } from "./types";
 export const branding: Branding = {
   companyName: "Oxtinmediaconcept Limited",
   wordmark: { strong: "Oxtin", light: "mediaconcept" },
-  // PLACEHOLDER: set once the high-resolution logo (SVG or transparent PNG) is supplied, e.g.
-  // logo: { src: "/images/brand/oxtinmediaconcept-logo.svg", alt: "Oxtinmediaconcept Limited", width: 220, height: 48 },
-  logo: null,
+  logo: {
+    src: "/images/brand/oxtin-logo-emblem-v2.png",
+    alt: "Oxtinmediaconcept Limited Logo",
+    width: 512,
+    height: 512,
+  },
   tagline: "Branding • Printing • Fabrication • Installation • Sculpture",
   colors: {
     primary: "#1536C6",

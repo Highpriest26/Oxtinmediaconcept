@@ -24,7 +24,7 @@ export function SiteFooter() {
           <ul className="space-y-1 text-sm">
             {services.map((s) => (
               <li key={s.slug}>
-                <Link href={`/services/${s.slug}`} className="inline-flex min-h-9 items-center hover:text-white">
+                <Link href={`/services/${s.slug}`} className="inline-flex min-h-11 items-center hover:text-white">
                   {s.title}
                 </Link>
               </li>
@@ -37,7 +37,7 @@ export function SiteFooter() {
           <ul className="space-y-1 text-sm">
             {[...mainNav.filter((n) => n.href !== "/"), primaryCta].map((n) => (
               <li key={n.href}>
-                <Link href={n.href} className="inline-flex min-h-9 items-center hover:text-white">
+                <Link href={n.href} className="inline-flex min-h-11 items-center hover:text-white">
                   {n.label}
                 </Link>
               </li>
@@ -47,29 +47,30 @@ export function SiteFooter() {
 
         <div className="lg:col-span-3">
           <h2 className="eyebrow mb-4 text-white">Contact</h2>
-          <address className="space-y-4 text-sm not-italic">
-            <p className="flex gap-3">
-              <Icon name="pin" className="mt-0.5 size-4 shrink-0 text-white/50" />
+          <address className="space-y-3 text-sm not-italic">
+            <p className="flex items-start gap-3 py-1">
+              <Icon name="pin" className="mt-1 size-4 shrink-0 text-white/50" />
               <span>{contact.address.singleLine}</span>
             </p>
             {publicPhones().map((p) => (
-              <p key={p.e164} className="flex gap-3">
-                <Icon name="phone" className="mt-0.5 size-4 shrink-0 text-white/50" />
-                <a href={telHref(p.e164)} className="hover:text-white">
-                  {p.display}
+              <p key={p.e164}>
+                <a href={telHref(p.e164)} className="inline-flex min-h-11 items-center gap-3 hover:text-white">
+                  <Icon name="phone" className="size-4 shrink-0 text-white/50" />
+                  <span>{p.display}</span>
                 </a>
               </p>
             ))}
-            <p className="flex gap-3">
-              <Icon name="mail" className="mt-0.5 size-4 shrink-0 text-white/50" />
-              <a href={mailHref()} className="break-all hover:text-white">
-                {contact.email.address}
+            <p>
+              <a href={mailHref()} className="inline-flex min-h-11 items-center gap-3 break-all hover:text-white">
+                <Icon name="mail" className="size-4 shrink-0 text-white/50" />
+                <span>{contact.email.address}</span>
               </a>
             </p>
-            <p className="flex gap-3">
-              <Icon name="whatsapp" className="mt-0.5 size-4 shrink-0 text-white/50" />
-              <a href={whatsappHref()} target="_blank" rel="noopener noreferrer" className="hover:text-white">
-                Chat on WhatsApp<span className="sr-only"> (opens in a new tab)</span>
+            <p>
+              <a href={whatsappHref()} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-3 hover:text-white">
+                <Icon name="whatsapp" className="size-4 shrink-0 text-white/50" />
+                <span>Chat on WhatsApp</span>
+                <span className="sr-only"> (opens in a new tab)</span>
               </a>
             </p>
           </address>
@@ -77,7 +78,7 @@ export function SiteFooter() {
             <ul className="mt-6 flex flex-wrap gap-4 text-sm">
               {contact.socialLinks.map((s) => (
                 <li key={s.href}>
-                  <a href={s.href} target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                  <a href={s.href} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center hover:text-white">
                     {s.label}
                   </a>
                 </li>
@@ -87,7 +88,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-white/10">
-        <div className="container-site flex flex-col gap-2 py-6 text-xs text-white/45 sm:flex-row sm:justify-between">
+        <div className="container-site flex flex-col gap-2 pt-6 pb-28 md:py-6 text-xs text-white/45 sm:flex-row sm:justify-between">
           <p>
             © {year} {company.legalName}. All rights reserved.
           </p>

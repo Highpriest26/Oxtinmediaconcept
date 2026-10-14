@@ -15,7 +15,7 @@ export { services, quoteProjectTypes, quoteTimelines } from "./services";
 export { projects, featuredStorySlug, portfolioFilters, selectedBrands } from "./projects";
 export { equipment } from "./equipment";
 export { media, heroImage, workshopGallery } from "./media";
-export { team } from "./team";
+export { team, ceo, companyOrigin } from "./team";
 export { faqs } from "./faqs";
 export { seo, siteUrl } from "./seo";
 export { isImageAvailable, pickImage } from "@/lib/images";
@@ -59,4 +59,12 @@ export function countProjectsByFilter(filter: PortfolioFilter): number {
 
 export function getPublicTeam() {
   return team.filter((m) => m.public);
+}
+
+export function getCoreTeam() {
+  return team.filter((m) => m.group === "staff" && m.public);
+}
+
+export function getStateLeads() {
+  return team.filter((m) => m.group === "state-lead" && m.public);
 }

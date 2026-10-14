@@ -84,7 +84,7 @@ export function MobileMenu({
         id={panelId}
         ref={panelRef}
         hidden={!open}
-        className="fixed inset-x-0 bottom-0 top-[var(--header-h)] z-50 overflow-y-auto bg-paper"
+        className="fixed inset-x-0 bottom-0 top-[var(--header-h)] z-[55] overflow-y-auto bg-paper"
       >
         <nav aria-label="Mobile" className="container-site flex min-h-full flex-col py-6">
           <ul className="divide-y divide-ink/10 border-y border-ink/10">
@@ -109,10 +109,10 @@ export function MobileMenu({
             })}
           </ul>
           <div className="mt-8 grid gap-3">
-            <Link href={cta.href} onClick={() => setOpen(false)} className={buttonClass("primary", "w-full")}>
+            <Link href={cta.href} onClick={() => setOpen(false)} className={buttonClass("primary", "w-full rounded-full")}>
               {cta.label}
             </Link>
-            <a href={phone.href} className={buttonClass("outline", "w-full")}>
+            <a href={phone.href} className={buttonClass("outline", "w-full rounded-full")}>
               <Icon name="phone" className="size-4" />
               Call {phone.display}
             </a>

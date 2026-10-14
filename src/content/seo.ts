@@ -19,7 +19,7 @@ export const seo = {
   services: {
     title: "Services",
     description:
-      "Billboards and outdoor advertising, branding and signage, large-format printing, vehicle branding, commercial finishing, sculpture and graphic design.",
+      "Billboards and outdoor advertising, branding, signage and fabricated letters, large-format and general printing, vehicle branding, painting and alco-board cladding, sculpture, and graphic design.",
   },
   projects: {
     title: "Projects",

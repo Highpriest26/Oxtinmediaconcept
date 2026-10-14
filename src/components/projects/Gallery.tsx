@@ -37,9 +37,8 @@ export function Gallery({
       <ul
         aria-label={label}
         className={cn(
-          layout === "strip" &&
-            "no-scrollbar -mx-5 flex snap-x snap-mandatory gap-3 overflow-x-auto px-5 md:mx-0 md:grid md:grid-cols-2 md:gap-4 md:overflow-visible md:px-0 lg:grid-cols-3",
-          layout === "masonry" && "columns-2 gap-3 md:columns-3 md:gap-4 [&>li]:mb-3 md:[&>li]:mb-4",
+          layout === "strip" && "grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3",
+          layout === "masonry" && "columns-1 gap-4 sm:columns-2 md:columns-3 md:gap-6 [&>li]:mb-4 md:[&>li]:mb-6",
         )}
       >
         {images.map((image, i) => {
@@ -49,37 +48,45 @@ export function Gallery({
             layout === "masonry"
               ? masonryAspects[i % masonryAspects.length]
               : i === 0 && images.length > 2
-                ? "aspect-[4/3] md:aspect-[16/9] lg:aspect-auto"
+                ? "aspect-[16/10] sm:aspect-[16/9]"
                 : "aspect-[4/3]";
           return (
             <li
               key={`${image.src}-${i}`}
               className={cn(
-                "relative break-inside-avoid overflow-hidden bg-surface",
-                layout === "strip" && "w-[82%] shrink-0 snap-start sm:w-[60%] md:w-auto",
-                layout === "strip" && i === 0 && images.length > 2 && "md:col-span-2 lg:row-span-2",
+                "group relative break-inside-avoid overflow-hidden rounded-2xl bg-brand-dark shadow-sm ring-1 ring-white/10",
+                layout === "strip" && i === 0 && images.length > 2 && "sm:col-span-2",
                 aspect,
               )}
             >
+              <ImageOrFallback
+                image={image}
+                sizes={
+                  layout === "masonry"
+                    ? "(min-width: 768px) 33vw, 50vw"
+                    : i === 0 && images.length > 2
+                      ? "(min-width: 1024px) 66vw, (min-width: 768px) 100vw, 85vw"
+                      : "(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 85vw"
+                }
+                className="transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+              />
+
               {isViewable ? (
                 <button
                   type="button"
                   onClick={() => setIndex(viewIndex)}
-                  className="group absolute inset-0 block size-full cursor-zoom-in"
+                  className="absolute inset-0 z-10 block size-full cursor-zoom-in focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                   aria-label={`View larger: ${image.alt}`}
                 >
-                  <ImageOrFallback
-                    image={image}
-                    sizes={layout === "masonry" ? "(min-width: 768px) 33vw, 50vw" : "(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 82vw"}
-                    className="transition-transform duration-500 group-hover:scale-[1.03]"
-                  />
-                  <span className="absolute bottom-3 right-3 grid size-10 place-items-center bg-white/90 text-ink opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">
+                  <span className="sr-only">View larger: {image.alt}</span>
+                  <span
+                    aria-hidden="true"
+                    className="absolute bottom-3 right-3 grid size-10 place-items-center rounded-full bg-white/90 text-ink shadow-md opacity-0 transition-all duration-200 group-hover:opacity-100 group-focus-visible:opacity-100 group-hover:scale-110"
+                  >
                     <Icon name="expand" className="size-4" />
                   </span>
                 </button>
-              ) : (
-                <ImageOrFallback image={image} sizes="33vw" />
-              )}
+              ) : null}
             </li>
           );
         })}

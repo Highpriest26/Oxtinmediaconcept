@@ -18,6 +18,15 @@ const nextConfig: NextConfig = {
       },
     },
   },
+  async redirects() {
+    return [
+      {
+        source: "/services/large-format-printing",
+        destination: "/services/large-format-general-printing",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

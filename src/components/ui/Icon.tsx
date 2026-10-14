@@ -13,9 +13,38 @@ type UiIcon =
   | "whatsapp"
   | "pin"
   | "image"
-  | "expand";
+  | "expand"
+  | "home"
+  | "services"
+  | "projects"
+  | "about"
+  | "quote";
 
 const paths: Record<UiIcon, React.ReactNode> = {
+  home: (
+    <path d="M3 10.5L12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1v-9.5z" />
+  ),
+  services: (
+    <path d="M2 17l10 5 10-5M2 12l10 5 10-5M12 2L2 7l10 5 10-5-10-5z" />
+  ),
+  projects: (
+    <>
+      <rect x="2" y="7" width="20" height="14" rx="2" />
+      <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2M12 12v.01" />
+    </>
+  ),
+  about: (
+    <>
+      <circle cx="12" cy="8" r="4" />
+      <path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" />
+    </>
+  ),
+  quote: (
+    <>
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+      <path d="M8 9h8M8 13h5" />
+    </>
+  ),
   billboard: (
     <>
       <rect x="3" y="4" width="18" height="10" rx="1" />

@@ -54,15 +54,20 @@ export default async function ServiceDetailPage({
         intro={service.summary}
       >
         <div className="mt-8">
-          <ButtonLink href={`/request-quote?type=${encodeURIComponent(service.quoteProjectType)}`} variant="accent" arrow>
+          <ButtonLink
+            href={`/request-quote?type=${encodeURIComponent(service.quoteProjectType)}`}
+            variant="accent"
+            arrow
+            className="w-full sm:w-auto justify-center rounded-full font-bold shadow-md"
+          >
             Request a Quote for {service.title}
           </ButtonLink>
         </div>
       </PageHero>
 
       {/* Service Scope & Capabilities */}
-      <section className="py-20 sm:py-28">
-        <div className="container-site grid gap-12 lg:grid-cols-12">
+      <section className="py-14 sm:py-20 lg:py-28">
+        <div className="container-site grid gap-10 lg:grid-cols-12 lg:gap-12">
           <div className="space-y-6 lg:col-span-7">
             <SectionHeading
               eyebrow="Overview"
@@ -76,7 +81,7 @@ export default async function ServiceDetailPage({
           </div>
 
           <div className="lg:col-span-5">
-            <div className="border border-ink/10 bg-surface p-6 sm:p-8">
+            <div className="rounded-2xl border border-ink/10 bg-surface p-6 sm:p-8">
               <h3 className="eyebrow flex items-center gap-2 text-brand">
                 <Icon name={service.icon} className="size-5" />
                 {pageCopy.serviceDetail.includesTitle}
@@ -96,7 +101,7 @@ export default async function ServiceDetailPage({
 
       {/* Related Work */}
       {relatedProjects.length > 0 && (
-        <section className="border-t border-ink/10 bg-surface py-20 sm:py-28">
+        <section className="border-t border-ink/10 bg-surface py-14 sm:py-20 lg:py-28">
           <div className="container-site">
             <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
               <SectionHeading
@@ -104,11 +109,11 @@ export default async function ServiceDetailPage({
                 title={pageCopy.serviceDetail.relatedTitle}
                 intro={`Featured visual work and installations relevant to ${service.title.toLowerCase()}.`}
               />
-              <ButtonLink href="/projects" variant="outline" arrow className="shrink-0">
+              <ButtonLink href="/projects" variant="outline" arrow className="w-full sm:w-auto shrink-0 justify-center">
                 All projects
               </ButtonLink>
             </div>
-            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-10 sm:mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {relatedProjects.map((p) => (
                 <ProjectCard key={p.slug} project={p} />
               ))}
@@ -120,17 +125,19 @@ export default async function ServiceDetailPage({
       {/* Process */}
       <ProcessSteps tone="dark" />
 
-      {/* FAQ */}
-      <section className="py-20 sm:py-28">
-        <div className="container-site max-w-4xl">
-          <SectionHeading
-            eyebrow="Questions"
-            title={pageCopy.serviceDetail.faqTitle}
-            className="mb-12"
-          />
-          <FaqList faqs={faqs} />
-        </div>
-      </section>
+      {/* FAQ - Questions section commented out for billboards-outdoor-advertising as requested */}
+      {service.slug !== "billboards-outdoor-advertising" && (
+        <section className="py-20 sm:py-28">
+          <div className="container-site max-w-4xl">
+            <SectionHeading
+              eyebrow="Questions"
+              title={pageCopy.serviceDetail.faqTitle}
+              className="mb-12"
+            />
+            <FaqList faqs={faqs} />
+          </div>
+        </section>
+      )}
 
       <FinalCta
         title={`Ready to begin your ${service.title.toLowerCase()} project?`}

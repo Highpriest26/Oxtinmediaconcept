@@ -19,8 +19,8 @@ export default function ContactPage() {
         intro={pageCopy.contact.intro}
       />
 
-      <section className="py-16 sm:py-24">
-        <div className="container-site grid gap-16 lg:grid-cols-12">
+      <section className="py-10 sm:py-16 lg:py-24">
+        <div className="container-site grid gap-10 sm:gap-12 lg:gap-16 lg:grid-cols-12">
           {/* Direct Contact Blocks */}
           <div className="lg:col-span-5">
             <h2 className="eyebrow text-brand mb-6">Head Office &amp; Channels</h2>
@@ -29,7 +29,7 @@ export default function ContactPage() {
 
           {/* Contact Message Form */}
           <div className="lg:col-span-7">
-            <div className="border border-ink/10 bg-paper p-6 sm:p-10">
+            <div className="rounded-2xl border border-ink/10 bg-paper p-5 sm:p-8 lg:p-10 shadow-xs">
               <h2 className="font-display text-2xl font-bold text-ink mb-6">
                 {pageCopy.contact.formTitle}
               </h2>

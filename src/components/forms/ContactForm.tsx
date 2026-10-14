@@ -19,7 +19,7 @@ export function ContactForm() {
       {state.status === "not_configured" && (
         <div
           role="alert"
-          className="mb-8 border-l-4 border-amber-500 bg-amber-50 p-6 text-amber-900 dark:bg-amber-950/40 dark:text-amber-200"
+          className="mb-8 rounded-xl border-l-4 border-amber-500 bg-amber-50 p-6 text-amber-900 dark:bg-amber-950/40 dark:text-amber-200"
         >
           <div className="flex items-start gap-4">
             <Icon name="phone" className="mt-0.5 size-6 shrink-0 text-amber-600 dark:text-amber-400" />
@@ -56,7 +56,7 @@ export function ContactForm() {
       {state.status === "error" && (
         <div
           role="alert"
-          className="mb-8 border-l-4 border-red-500 bg-red-50 p-5 text-sm text-red-900 dark:bg-red-950/40 dark:text-red-200"
+          className="mb-8 rounded-xl border-l-4 border-red-500 bg-red-50 p-5 text-sm text-red-900 dark:bg-red-950/40 dark:text-red-200"
         >
           <p className="font-semibold">{state.message}</p>
         </div>
@@ -65,7 +65,7 @@ export function ContactForm() {
       {state.status === "success" && (
         <div
           role="alert"
-          className="mb-8 border-l-4 border-green-500 bg-green-50 p-6 text-green-900 dark:bg-green-950/40 dark:text-green-200"
+          className="mb-8 rounded-xl border-l-4 border-green-500 bg-green-50 p-6 text-green-900 dark:bg-green-950/40 dark:text-green-200"
         >
           <p className="text-lg font-bold">Message Sent</p>
           <p className="mt-2 text-sm leading-relaxed">{state.message}</p>
@@ -75,7 +75,7 @@ export function ContactForm() {
       {state.status === "invalid" && (
         <div
           role="alert"
-          className="mb-8 border-l-4 border-red-500 bg-red-50 p-5 text-sm text-red-900 dark:bg-red-950/40 dark:text-red-200"
+          className="mb-8 rounded-xl border-l-4 border-red-500 bg-red-50 p-5 text-sm text-red-900 dark:bg-red-950/40 dark:text-red-200"
         >
           <p className="font-semibold">{state.message}</p>
         </div>
@@ -105,7 +105,7 @@ export function ContactForm() {
             aria-invalid={Boolean(fieldErrors.fullName)}
             aria-describedby={fieldErrors.fullName ? `${formId}-fullName-err` : undefined}
             className={cn(
-              "mt-2 block w-full rounded-none border bg-paper px-4 py-3 text-ink transition-colors",
+              "mt-2 block w-full rounded-xl border bg-paper px-4 py-3.5 text-base text-ink transition-colors outline-none focus:ring-2 focus:ring-brand/20",
               fieldErrors.fullName ? "border-red-500 focus:border-red-500" : "border-ink/20 focus:border-brand",
             )}
             placeholder="Your name"
@@ -131,7 +131,7 @@ export function ContactForm() {
               aria-invalid={Boolean(fieldErrors.email)}
               aria-describedby={fieldErrors.email ? `${formId}-email-err` : undefined}
               className={cn(
-                "mt-2 block w-full rounded-none border bg-paper px-4 py-3 text-ink transition-colors",
+                "mt-2 block w-full rounded-xl border bg-paper px-4 py-3.5 text-base text-ink transition-colors outline-none focus:ring-2 focus:ring-brand/20",
                 fieldErrors.email ? "border-red-500 focus:border-red-500" : "border-ink/20 focus:border-brand",
               )}
               placeholder="you@company.com"
@@ -155,7 +155,7 @@ export function ContactForm() {
               aria-invalid={Boolean(fieldErrors.phone)}
               aria-describedby={fieldErrors.phone ? `${formId}-phone-err` : undefined}
               className={cn(
-                "mt-2 block w-full rounded-none border bg-paper px-4 py-3 text-ink transition-colors",
+                "mt-2 block w-full rounded-xl border bg-paper px-4 py-3.5 text-base text-ink transition-colors outline-none focus:ring-2 focus:ring-brand/20",
                 fieldErrors.phone ? "border-red-500 focus:border-red-500" : "border-ink/20 focus:border-brand",
               )}
               placeholder="e.g. 0811 494 8814"
@@ -181,7 +181,7 @@ export function ContactForm() {
             aria-invalid={Boolean(fieldErrors.message)}
             aria-describedby={fieldErrors.message ? `${formId}-message-err` : undefined}
             className={cn(
-              "mt-2 block w-full rounded-none border bg-paper px-4 py-3 text-ink transition-colors",
+              "mt-2 block w-full rounded-xl border bg-paper px-4 py-3.5 text-base text-ink transition-colors outline-none focus:ring-2 focus:ring-brand/20",
               fieldErrors.message ? "border-red-500 focus:border-red-500" : "border-ink/20 focus:border-brand",
             )}
             placeholder="How can we help with your branding, signage or fabrication needs?"
@@ -200,7 +200,7 @@ export function ContactForm() {
               type="checkbox"
               name="consent"
               required
-              className="mt-1 size-4 rounded-none border-ink/30 text-brand focus:ring-brand"
+              className="mt-1 size-4 rounded border-ink/30 text-brand focus:ring-brand"
             />
             <span className="text-xs leading-relaxed text-muted">
               I agree that Oxtinmediaconcept Limited may use these details to respond to my enquiry.
@@ -216,7 +216,7 @@ export function ContactForm() {
           <button
             type="submit"
             disabled={isPending}
-            className={buttonClass("primary", "w-full sm:w-auto min-w-[180px]")}
+            className={buttonClass("primary", "w-full sm:w-auto min-w-[180px] rounded-full")}
           >
             {isPending ? "Sending Message..." : "Send Message"}
           </button>

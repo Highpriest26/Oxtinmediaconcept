@@ -95,8 +95,13 @@ export default async function ProjectDetailPage({
             {project.shortDescription}
           </p>
 
-          <div className="mt-8 flex flex-wrap gap-4">
-            <ButtonLink href="/request-quote" variant="accent" arrow>
+          <div className="mt-8 flex flex-col sm:flex-row gap-4">
+            <ButtonLink
+              href="/request-quote"
+              variant="accent"
+              arrow
+              className="w-full sm:w-auto justify-center rounded-full font-bold shadow-md"
+            >
               Start a Similar Project
             </ButtonLink>
           </div>
@@ -269,14 +274,14 @@ export default async function ProjectDetailPage({
 
       {/* Related Projects */}
       {related.length > 0 && (
-        <section className="py-20 sm:py-28">
+        <section className="py-14 sm:py-20 lg:py-28">
           <div className="container-site">
             <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
               <SectionHeading
                 eyebrow="More projects"
                 title={pageCopy.projectDetail.relatedTitle}
               />
-              <ButtonLink href="/projects" variant="outline" arrow className="shrink-0">
+              <ButtonLink href="/projects" variant="outline" arrow className="w-full sm:w-auto shrink-0 justify-center">
                 View all work
               </ButtonLink>
             </div>

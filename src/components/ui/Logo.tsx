@@ -8,29 +8,32 @@ export function Logo({ tone = "dark", className }: { tone?: "dark" | "light"; cl
   return (
     <Link
       href="/"
-      className={cn("inline-flex min-h-11 items-center", className)}
+      className={cn("inline-flex min-h-11 items-center gap-2.5 sm:gap-3 group", className)}
       aria-label={`${branding.companyName} — home`}
     >
-      {branding.logo ? (
+      <div className="relative size-10 shrink-0 overflow-hidden rounded-full ring-2 ring-brand/20 shadow-xs transition-transform group-hover:scale-105">
         <Image
-          src={branding.logo.src}
-          alt={branding.logo.alt}
-          width={branding.logo.width}
-          height={branding.logo.height}
-          className="h-9 w-auto"
+          src={branding.logo?.src ?? "/images/brand/oxtin-logo-emblem.png"}
+          alt={branding.logo?.alt ?? branding.companyName}
+          width={48}
+          height={48}
+          className="size-full object-cover"
           preload
         />
-      ) : (
-        <span className="flex items-center gap-2.5" aria-hidden="true">
-          <span className="grid size-9 place-items-center bg-brand font-display text-lg font-black text-white">O</span>
-          <span className={cn("font-display text-lg leading-none", tone === "dark" ? "text-ink" : "text-white")}>
-            <span className="font-extrabold uppercase tracking-tight">{branding.wordmark.strong}</span>
-            <span className={cn("font-medium", tone === "dark" ? "text-brand" : "text-white/70")}>
-              {branding.wordmark.light}
-            </span>
-          </span>
+      </div>
+      <span className={cn("font-display leading-tight", tone === "dark" ? "text-ink" : "text-white")}>
+        <span className="font-extrabold uppercase tracking-tight text-base sm:text-lg block">
+          {branding.wordmark.strong}
         </span>
-      )}
+        <span
+          className={cn(
+            "text-xs sm:text-[13px] font-semibold tracking-wide block -mt-0.5",
+            tone === "dark" ? "text-brand" : "text-white/75"
+          )}
+        >
+          {branding.wordmark.light}
+        </span>
+      </span>
     </Link>
   );
 }

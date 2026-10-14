@@ -26,7 +26,7 @@ export function ProjectCard({
 
   return (
     <article className={cn("group relative", className)}>
-      <div className={cn("relative overflow-hidden bg-brand-dark", aspect)}>
+      <div className={cn("relative overflow-hidden rounded-2xl bg-brand-dark shadow-sm ring-1 ring-white/10", aspect)}>
         <ImageOrFallback
           image={cover}
           sizes={sizes}
@@ -35,11 +35,11 @@ export function ProjectCard({
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
         <div className="absolute left-4 top-4 flex flex-wrap gap-2">
           {project.brand ? (
-            <span className="bg-white px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-ink">
+            <span className="rounded-md bg-white px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-ink shadow-xs">
               {project.brand}
             </span>
           ) : null}
-          <span className="bg-brand px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider text-white">
+          <span className="rounded-md bg-brand px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider text-white shadow-xs">
             {project.category}
           </span>
         </div>
@@ -51,7 +51,7 @@ export function ProjectCard({
           </H>
           <span
             aria-hidden="true"
-            className="grid size-11 shrink-0 place-items-center bg-white text-ink transition-colors group-hover:bg-accent group-hover:text-white"
+            className="grid size-11 shrink-0 place-items-center rounded-full bg-white text-ink transition-colors group-hover:bg-accent group-hover:text-white shadow-xs"
           >
             <Icon name="arrow-up-right" className="size-5" />
           </span>
