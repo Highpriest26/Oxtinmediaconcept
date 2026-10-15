@@ -8,7 +8,7 @@ export const ceo = {
   name: "Ezeh Augustine Sunday",
   title: "Founder, Managing Director & CEO",
   role: "Founder, Managing Director & CEO",
-  photo: null as ImageAsset | null,
+  photo: media.ceoAugustine as ImageAsset | null,
   bio: "Ezeh Augustine Sunday founded Oxtinmediaconcept in 2017 with a hands-on commitment to excellence in physical branding, large-format printing, structural fabrication, billboard installations, and creative sculpture. Under his leadership, the company has grown from an Abuja printing and signage workshop into a trusted nationwide execution partner with over 450 projects delivered across Nigeria.",
   quote: "We don't merely produce graphics on screens. We take complete engineering and production ownership to install physical brand experiences that endure in the real world.",
 };
@@ -35,7 +35,7 @@ export const team: TeamMember[] = [
     name: "Ezeh Augustine Sunday",
     role: "Founder, Managing Director & CEO",
     roleStatus: "verified",
-    photo: null,
+    photo: media.ceoAugustine,
     group: "leadership",
     public: true,
   },

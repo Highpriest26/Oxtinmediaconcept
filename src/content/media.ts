@@ -73,7 +73,7 @@ export const media = {
   workshop09: img("/images/workshop/workshop-09.png", "Workshop and materials storage"),
 
   // ---- Team & Leadership ----
-  // Note: CEO portrait (ceo-augustine-ezeh.jpg) is awaiting client provision; rendered with executive monogram.
+  ceoAugustine: img("/images/team/ceo-augustine-ezeh.jpg", "Ezeh Augustine Sunday, Founder, Managing Director & CEO"),
   teamUmahi: img("/images/team/umahi-emmanuel-v2.png", "Umahi Emmanuel, Production & Brand Account Lead"),
   teamNnadi: img("/images/team/nnadi-chris-v2.png", "Nnadi Chris, Production & Brand Account Lead"),
   teamSamuel: img("/images/team/samuel-qoyum-v2.png", "Samuel Qoyum, Senior Graphic Designer"),
