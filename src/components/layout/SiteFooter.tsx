@@ -88,13 +88,27 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-white/10">
-        <div className="container-site flex flex-col gap-2 pt-6 pb-28 md:py-6 text-xs text-white/45 sm:flex-row sm:justify-between">
+        <div className="container-site flex flex-col gap-3 pt-6 pb-28 md:py-6 text-xs text-white/45 sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {year} {company.legalName}. All rights reserved.
           </p>
-          <p>
-            {company.experienceDisplay} · {company.locationSummary}
-          </p>
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+            <span>
+              {company.experienceDisplay} · {company.locationSummary}
+            </span>
+            <span aria-hidden="true" className="text-white/20">·</span>
+            <span>
+              Designed by{" "}
+              <a
+                href="https://www.boffinstechnology.com.ng"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-white/70 underline underline-offset-4 transition-colors hover:text-white"
+              >
+                Boffins Technology LTD
+              </a>
+            </span>
+          </div>
         </div>
       </div>
     </footer>

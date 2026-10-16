@@ -38,6 +38,12 @@ export const media = {
   // ---- Speedaf ----
   speedafMotorcycle01: img("/images/projects/speedaf/speedaf-motorcycle-branding-01.png", "Speedaf branded logistics motorcycle"),
 
+  // ---- NEXUS ----
+  nexusOutdoorBillboard01: img("/images/projects/nexus/nexus-outdoor-billboard-01.jpg", "NEXUS building billboard and outdoor advertising"),
+
+  // ---- Haano ----
+  haanoCommercialFacade01: img("/images/projects/haano/haano-commercial-facade-01.jpg", "Haano commercial façade, wall graphics and retail branding"),
+
   // ---- Sculpture ----
   sculpture01: img("/images/sculpture/sculpture-01.png", "Figurative guitarist sculpture"),
   sculpture02: img("/images/sculpture/sculpture-02.png", "Figurative sculpture of an armed person"),

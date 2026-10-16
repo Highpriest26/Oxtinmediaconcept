@@ -132,6 +132,40 @@ export const projects: Project[] = [
     detailsStatus: "VISUAL_PORTFOLIO_ONLY_UNTIL_MORE_PROJECT_DATA",
     isPlaceholder: false,
   },
+  {
+    id: "p-nexus",
+    slug: "nexus-outdoor-billboard-branding",
+    kind: "brand-portfolio",
+    title: "NEXUS Building Billboard & Outdoor Advertising",
+    brand: "NEXUS",
+    category: "Billboards & Outdoor Advertising",
+    filters: ["outdoor"],
+    serviceSlugs: ["billboards-outdoor-advertising", "branding-signage"],
+    shortDescription:
+      "Large-scale commercial building billboard and outdoor advertising installation for NEXUS appliances, from our approved portfolio.",
+    workShown: ["Building façade billboard", "Large-format outdoor banner", "Steel framing and tensioned mounting", "High-elevation installation"],
+    images: [media.nexusOutdoorBillboard01],
+    featured: true,
+    detailsStatus: "VISUAL_PORTFOLIO_ONLY_UNTIL_MORE_PROJECT_DATA",
+    isPlaceholder: false,
+  },
+  {
+    id: "p-haano",
+    slug: "haano-commercial-facade-branding",
+    kind: "brand-portfolio",
+    title: "Haano Commercial Façade & Retail Branding",
+    brand: "Haano",
+    category: "Branding, Signage & Fabricated Letters",
+    filters: ["retail-signage", "outdoor"],
+    serviceSlugs: ["branding-signage", "billboards-outdoor-advertising"],
+    shortDescription:
+      "Comprehensive commercial building façade branding, multi-sign outdoor displays, and branded wall graphics for Haano, from our approved portfolio.",
+    workShown: ["Commercial façade branding", "Large-format wall banners", "Retail signage", "Exterior building graphics"],
+    images: [media.haanoCommercialFacade01],
+    featured: true,
+    detailsStatus: "VISUAL_PORTFOLIO_ONLY_UNTIL_MORE_PROJECT_DATA",
+    isPlaceholder: false,
+  },
 ];
 
 /** Slug of the project used for the homepage "Featured Brand Portfolio" story. */
@@ -146,4 +180,20 @@ export const portfolioFilters: { id: PortfolioFilter; label: string }[] = [
 ];
 
 /** Brands approved for public naming (shown in the "Selected Brands" strip). */
-export const selectedBrands: string[] = ["TECNO", "Infinix", "itel", "OPPO", "Speedaf"];
+export const selectedBrands: string[] = [
+  "TECNO",
+  "Infinix",
+  "itel",
+  "OPPO",
+  "Speedaf",
+  "VIVO",
+  "SHARP",
+  "NEXUS",
+  "BRUHM",
+  "TAMAS",
+  "HEKO",
+  "LG",
+  "TCL",
+  "Haano",
+  "Oraimo",
+];

@@ -8,8 +8,8 @@ import { selectedBrands } from "@/content/projects";
 export function SelectedBrands() {
   return (
     <section aria-labelledby="selected-brands" className="border-y border-ink/10 py-14 sm:py-16">
-      <div className="container-site flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-16">
-        <h2 id="selected-brands" className="eyebrow shrink-0 text-muted">
+      <div className="container-site flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-16">
+        <h2 id="selected-brands" className="eyebrow shrink-0 text-muted lg:pt-2">
           {pageCopy.home.brands.title}
         </h2>
         <ul className="flex flex-wrap items-center gap-x-10 gap-y-4 sm:gap-x-14">

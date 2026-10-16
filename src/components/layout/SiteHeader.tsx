@@ -4,7 +4,6 @@ import { telHref } from "@/lib/utils";
 import { buttonClass } from "../ui/Button";
 import { Icon } from "../ui/Icon";
 import { Logo } from "../ui/Logo";
-import { MobileMenu } from "./MobileMenu";
 import { NavLinks } from "./NavLinks";
 import Link from "next/link";
 
@@ -14,7 +13,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 h-[var(--header-h)] border-b border-ink/10 bg-paper/95 backdrop-blur-xs">
       <div className="container-site flex h-full items-center justify-between gap-4 sm:gap-6">
         <Logo />
-        <nav aria-label="Main" className="hidden lg:block">
+        <nav aria-label="Main" className="hidden md:block">
           <NavLinks items={mainNav} />
         </nav>
         <div className="flex items-center gap-2 sm:gap-3">
@@ -35,11 +34,6 @@ export function SiteHeader() {
               {primaryCta.label}
             </Link>
           </div>
-          <MobileMenu
-            items={mainNav}
-            cta={primaryCta}
-            phone={{ display: primary.display, href: telHref(primary.e164) }}
-          />
         </div>
       </div>
     </header>
